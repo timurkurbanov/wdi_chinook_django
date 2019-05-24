@@ -1,0 +1,22 @@
+1. Artist.objects.get(name="Queen") 
+
+
+2.Track.objects.filter(media_type_id=3).count()
+
+3. Genre.objects.get(name="Hip Hop/Rap") 
+
+4. Track.objects.filter(genre_id=17).count()
+
+5. Track.objects.aggregate(Sum('milliseconds')) 
+
+
+6. Track.objects.filter(media_type_id=1).aggregate(Max('unit_price')) 
+
+7. Track.objects.filter(unit_price=1.99)[0] 
+Track.objects.get(pk=2852).name 
+
+8. Artist.objects.order_by('created_at')[0:2]   
+
+9. Genre.objects.get(name='Electronica/Dance')  
+
+10. Track.objects.filter(media_type=1).filter(genre=15)
